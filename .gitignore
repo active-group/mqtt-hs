@@ -2,3 +2,6 @@
 .stack-work/
 /net-mqtt.cabal
 TAGS
+out/
+net-mqtt.iml
+.idea/

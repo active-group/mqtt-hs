@@ -20,7 +20,7 @@ import           Network.MQTT.Types
 prop_rtLengthParser :: NonNegative (Large Int) -> Property
 prop_rtLengthParser (NonNegative (Large x)) =
   x <= 268435455 ==> label (show (length e) <> "B") $
-  cover 20 (length e > 1) "multi-byte" $
+  cover (length e > 1) 20 "multi-byte" $
   d e == x
 
   where e = encodeLength x
